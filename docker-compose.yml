@@ -7,16 +7,10 @@ services:
       - c10_moodledata:/var/moodledata
       - c10_dbdata:/var/lib/postfresql/9.5/main
       - c10_logs:/var/log
-    networks:
-      - capesc5
     ports:
       - 8092:80
 
 volumes:
-  - c10_moodledata:
-  - c10_dbdata:
-  - c10_logs:
-
-networks:
-  - capesc5:
-      driver: overlay
+  c10_moodledata:
+  c10_dbdata:
+  c10_logs:
